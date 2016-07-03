@@ -1,3 +1,19 @@
+.owngown{
+    margin-top: 40px !important;
+    margin-left: 30px !important;
+    color: purple !important;
+    background-color: #fff !important;
+}
+.owngown2{
+     color: purple !important;
+    background-color: #fff !important;
+}
+.owngown:hover, .owngown2:hover{
+    background-color: transparent !important;
+    color: #ec008c !important;
+}
+
+
 html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;

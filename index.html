@@ -54,7 +54,7 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<div class="nav-other">
-					<span><i class="fa fa-phone"></i> +233 20 688 0824</span>
+					<span><i class="fa fa-phone"></i><i class="fa fa-whatsapp"></i> +233 20 688 0824</span>
 					<span><a href="https://twitter.com/weddresser" onclick="twitter()" target="_blank" class="icon" ><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 	<a href="https://www.facebook.com/weddresser" onclick="facebook()" target="_blank" class="icon"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                 	<a href="https://www.instagram.com/weddresser/" onclick="instagram()" target="_blank" class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
@@ -72,8 +72,9 @@
 				<img src="images/logo1.png"style="height="35%", width="35%"" alt="Brand logo"> 
 				<br><br><br>
 				<hr>
-				<p class="title-sub">Rent, Sell and Buy Designer Wedding Gowns</p>
-				<a href="#popup-contact-form" class="btn btn-line light popup-contact">Get a gown</a>
+				<p class="title-sub">Rent, Buy and Sell Pre-Owned Designer Wedding Gowns</p>
+				<a href="#popup-contact-form" class="btn btn-line light popup-contact">I want a gown</a>
+				<a href="#popup-contact-form2" class="owngown btn btn-line light popup-contact">I own a gown</a>
 			</div>
 		</div><!-- /.Caption container -->
 
@@ -129,6 +130,9 @@
 				<p class="title-sub txt-light">
 					We give you a list of gowns to choose from for your wedding day. No matter your budget, we focus on giving you the most beautiful and luxurious gown for your day. All you have to do is to wear the gown. We take care of cleaning and alteration.
 				</p>
+				<hr class="mr-tb-40">
+
+			<a href="#popup-contact-form" class="btn btn-line light popup-contact btn-lg">I want a gown</a>
 			</div>
 
 			<div id="service-tab-2" class="tab-pn">
@@ -136,18 +140,20 @@
 				<p class="title-sub txt-light">
 					Buy designer preowned gowns at a fraction of the retail costs. We make sure that our gowns fit your criteria and help you choose the perfect fitting gown for your day.
 				</p>	
+				<hr class="mr-tb-40">
+
+			<a href="#popup-contact-form" class="btn btn-line light popup-contact btn-lg">I want a gown</a>
 			</div>
 
 			<div id="service-tab-3" class="tab-pn">
 				<h2 class="title small">Sell a gown</h2>
 				<p class="title-sub txt-light">
-					Share your gown which is wasting away in your closet with brides to-be. List your gown on our platform and we will help you find the perfect person to share your gown with. Let's help you make some money out of your gown.
+					Share your gown with brides to-be. List your gown on our platform and we will help you find the perfect person to share your gown with. Let's help you make some money out of your gown.
 				</p>
+				<hr class="mr-tb-40">
+
+			<a href="#popup-contact-form2" class="owngown2 btn btn-line light popup-contact btn-lg">I own a gown</a>
 			</div>
-			<hr class="mr-tb-40">
-
-			<a href="#popup-contact-form" class="btn btn-line light popup-contact btn-lg">Get a gown</a>
-
 		</div><!-- /.container -->
 
 		<div class="full-wh bg-section bg-cover" data-bg="images/dwed.png"></div>
@@ -299,6 +305,7 @@
 					<img src="images/logo1.png" alt="Company logo">
 					<p>20 Aluguntuguin Street, East Legon </p>
 					<p>hello@weddresser.com</p>
+					<p>+233 20 688 0824</p>
 				</div><!-- /Logo and address -->
 
 				<div class="col-md-3 c">
@@ -338,8 +345,8 @@
 	<!-- Popup contact form -->
 	<div id="popup-contact-form" class="mfp-hide white-popup-block popup-form">
 		<div class="pop-header">
-			<h3 class="title medium">Contact Us</h3>
-			<p class="title-sub mini">Do you want a gown or own a gown?</p>	
+			<h3 class="title medium">Rent or Buy a Gown</h3>
+			<p class="title-sub mini">We will contact you within 24 hours</p>	
 		</div>
 		<div class="pop-body">
 			<form action="form-data/formdata.php" class="form-widget" data-popup="popup-contact">
@@ -354,19 +361,41 @@
 				</div>
 				<select class="form-control" required data-label="Service" data-msg="Please select service" name="service">
 					<option value="">-- Select service -- </option>
-					<option value="Website Development">Rent a gown</option>
-					<option value="Search Engine Optimization">Sell a gown</option>
-					<option value="E-Commerce Solutions">Buy a gown</option>
-					<option value="Other">Other</option>
+					<option value="Rent">Rent a gown</option>
+					<option value="Buy">Buy a gown</option>
 				</select>
 				<button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Submit</button>
 			</form>	
 			<div class="msg-block"></div>
 		</div>
-	</div><!-- /
+	</div><!---->
 
-	 -->
-
+	<div id="popup-contact-form2" class="mfp-hide white-popup-block popup-form">
+		<div class="pop-header" style="background-color: #92278f">
+			<h3 class="title medium">Sell or Lend a Gown</h3>
+			<p class="title-sub mini">We will contact you within 24 hours.</p>	
+		</div>
+		<div class="pop-body">
+			<form action="form-data/formdata.php" class="form-widget" data-popup="popup-contact">
+				<input type="hidden" name="to" value="r.genesis.art@gmail.com">
+				<div class="row gt10">
+					<div class="col-md-6">
+						<input class="form-control" required data-label="Name" data-msg="Please enter name." type="text" name="name" placeholder="Enter your name">		
+					</div>
+					<div class="col-md-6">
+						<input class="form-control" required data-label="Phone" data-msg="Please phone number." type="text" name="phone" placeholder="Enter your phone number">
+					</div>
+				</div>
+				<select class="form-control" required data-label="Service" data-msg="Please select service" name="service">
+					<option value="">-- Select service -- </option>
+					<option value="Sell">Sell a gown</option>
+					<option value="Lend">Lend a gown</option>
+				</select>
+				<button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Submit</button>
+			</form>	
+			<div class="msg-block"></div>
+		</div>
+	</div><!---->
 </div>
 <!-- /#page --> 
 
