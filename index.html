@@ -25,6 +25,24 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/android-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/android-icon-114x114.png">
 
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+	<!-- Hotjar Tracking Code for http://www.weddresser.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:243448,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+	<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
+
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
@@ -81,7 +99,7 @@
 		
 
 		<!-- Background image -->
-		<div class="bg-section full-wh bg-cover bg-cc" data-bg="images/wed3.jpg"></div>
+		<div class="bg-section full-wh bg-cover bg-cc" data-bg="images/wedd3.png"></div>
 	</section><!-- /.intro-section -->
 
 	
@@ -289,7 +307,7 @@
 						<img src="images/marchesa logo.jpg" alt="image">
 							<img src="images/oscar-de-la-renta-logo.jpg" alt="image">
 							<img src="images/caroline herrara.jpg" alt="image">
-							<img src="images/pnina tornai logo.png" alt="image">
+							<img src="images/anne barge logo.png" alt="image">
 							<img src="images/vera wang logo.jpg" alt="image">
 							<img src="images/galialahav-logo.png" alt="image">
 					</div><!-- /.client-logos -->					
@@ -402,6 +420,32 @@
 <!-- JavaScript --> 
 <script src="minify/rgen_min.js"></script>
 <script async src="js/rgen.js"></script>
+
+ <script>
+    $('#newUser').submit(function(e){
+      e.preventDefault();
+     
+      var myFirebaseRef = new Firebase("https://scorching-heat-3850.firebaseio.com/");
+      var newContact = $('##popup-contact-form').val().trim();
+       var newContact2 = $('##popup-contact-form2').val().trim();
+       myFirebaseRef.push({email: newContact });
+       $(".message").addClass("success");
+       $(".message").html('Thanks for signing up. We will contact you within 24 hours.');
+        mixpanel.track("Signup");
+        $('#contact').val('');
+    });
+
+    mixpanel.track("Pageview");
+    function twitter(){
+        mixpanel.track('twitter');
+    }
+    function facebook(){
+        mixpanel.track('facebook');
+    }
+    function instagram(){
+        mixpanel.track('instagram');
+    }
+    </script>
 
 </body>
 </html>
