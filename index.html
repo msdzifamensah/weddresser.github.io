@@ -361,23 +361,22 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 	</section><!-- ./Footer section -->
 
 	<!-- Popup contact form -->
-	<div id="popup-contact-form" class="mfp-hide white-popup-block popup-form">
+	<div id="popup-contact-form" >
 		<div class="pop-header">
 			<h3 class="title medium">Rent or Buy a Gown</h3>
 			<p class="title-sub mini">We will contact you within 24 hours</p>	
 		</div>
 		<div class="pop-body">
-			<form action="form-data/formdata.php" class="form-widget" data-popup="popup-contact">
-				<input type="hidden" name="to" value="r.genesis.art@gmail.com">
+			<form action="#" id="form-one" class="form-widget" data-popup="popup-contact">
 				<div class="row gt10">
 					<div class="col-md-6">
-						<input class="form-control" required data-label="Name" data-msg="Please enter name." type="text" name="name" placeholder="Enter your name">		
+						<input class="form-control" id="name-one" required data-label="Name" data-msg="Please enter name." type="text" name="name" placeholder="Enter your name">		
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" required data-label="Phone" data-msg="Please phone number." type="text" name="phone" placeholder="Enter your phone number">
+						<input class="form-control" id="phone-one" required data-label="Phone" data-msg="Please phone number." type="text" name="phone" placeholder="Enter your phone number">
 					</div>
 				</div>
-				<select class="form-control" required data-label="Service" data-msg="Please select service" name="service">
+				<select class="form-control" id="service-one" required data-label="Service" data-msg="Please select service" name="service">
 					<option value="">-- Select service -- </option>
 					<option value="Rent">Rent a gown</option>
 					<option value="Buy">Buy a gown</option>
@@ -394,7 +393,7 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 			<p class="title-sub mini">We will contact you within 24 hours.</p>	
 		</div>
 		<div class="pop-body">
-			<form action="form-data/formdata.php" class="form-widget" data-popup="popup-contact">
+			<form action="form-data/formdata.php" id="form-two" class="form-widget" data-popup="popup-contact">
 				<input type="hidden" name="to" value="r.genesis.art@gmail.com">
 				<div class="row gt10">
 					<div class="col-md-6">
@@ -421,20 +420,51 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 <script src="minify/rgen_min.js"></script>
 <script async src="js/rgen.js"></script>
 
- <script>
-    $('#newUser').submit(function(e){
-      e.preventDefault();
-     
-      var myFirebaseRef = new Firebase("https://scorching-heat-3850.firebaseio.com/");
-      var newContact = $('##popup-contact-form').val().trim();
-       var newContact2 = $('##popup-contact-form2').val().trim();
-       myFirebaseRef.push({email: newContact });
-       $(".message").addClass("success");
-       $(".message").html('Thanks for signing up. We will contact you within 24 hours.');
-        mixpanel.track("Signup");
-        $('#contact').val('');
-    });
+ <script type="text/javascript" src="https://library.devless.io/cdn/dv-alpha.js/dv_sdk.js"></script>
+  <script>
+      $(document).ready(function(){ 
+        $('.form-one').on('submit', function(evt) {
+        	console.log("form submit")
+          // Stop form submission
+          evt.preventDefault();
+        
+              var dio = new Devless({
+              token: '984e6fceb013c72e0e5d67c80b689f4f',
+              key: 'demo.devless.io',
+              domainName: 'demo.devless.io',
+              protocol: 'https'
+            });
+            name = $("#name-one").val()
+            phone = $("#phone-one").val()
+            service = $("#service-one").val()
+            email = "test@gmail.com"
+            purpose= "rent"
+            when = Date()
+ 			
+ 			data ={
+                    "when": when,
+                    "purpose": purpose,
+                    "email": email,
+                    "service": service,
+                    "number": phone,
+                    "name": name
+                }
 
+              var callback = function callback(response) {
+              	console.log(response)
+                if(response.status_code == 609 ){
+                    alert("Thank you for signing up ")
+                }
+                
+              }
+              dio.addData('mary-signup', 'signup-table', data, callback);
+           
+         
+        });
+      });  
+     </script>
+
+ <script>
     mixpanel.track("Pageview");
     function twitter(){
         mixpanel.track('twitter');
