@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -91,7 +91,7 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 				<br><br><br>
 				<hr>
 				<p class="title-sub">Rent, Buy and Sell Pre-Owned Designer Wedding Gowns</p>
-				<a href="#popup-contact-form" class="btn btn-line light popup-contact">I want a gown</a>
+				<a href="#popup-contact-form1" class="btn btn-line light popup-contact">I want a gown</a>
 				<a href="#popup-contact-form2" class="owngown btn btn-line light popup-contact">I own a gown</a>
 			</div>
 		</div><!-- /.Caption container -->
@@ -336,16 +336,7 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 				</div><!-- Quick links -->
 
 				<div class="col-md-6 r">
-					<div class="newsletter mr-b-20">
-						<h5 class="hd">Sign up to get news, latest releases and more...</h5>
-						<form action="form-data/notify-me.php" method="post" id="subscribe">
-							<div class="field-group">
-								<input class="form-control" type="email" name="email" id="email" placeholder="Enter your email">
-								<button type="submit" id="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i></button>
-							</div>
-							<div class="msg-wrp"></div>
-						</form> <!-- /form -->	
-					</div>
+					
 					<div class="social-links">
 						<a href="https://twitter.com/weddresser" onclick="twitter()" target="_blank" class="icon" ><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 		<a href="https://www.facebook.com/weddresser" onclick="facebook()" target="_blank" class="icon"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -360,29 +351,83 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 		</div>
 	</section><!-- ./Footer section -->
 
+	<div id="popup-contact-form2" class="mfp-hide white-popup-block popup-form">
+		<div class="pop-header" style="background-color: #92278f">
+			<h3 class="title medium">Sell or Lend a Gown</h3>
+			<p class="title-sub mini">We will contact you within 24 hours.</p>	
+		</div>
+		<div class="pop-body">
+			
+				<input type="hidden" name="to" value="r.genesis.art@gmail.com">
+				<div class="row gt10">
+					<div class="col-md-6">
+						<input class="form-control" required data-label="Name" data-msg="Please enter name." type="text" id="name" name="name" placeholder="Enter your name">		
+					</div>
+					<div class="col-md-6">
+						<input class="form-control" required data-label="Phone" data-msg="Please phone number." type="text" id="phone" name="phone" placeholder="Enter your phone number">
+					</div>
+				</div>
+				<select class="form-control" required data-label="Service" data-msg="Please select service" id="service" name="service">
+					<option value="">-- Select service -- </option>
+					<option value="Sell">Sell a gown</option>
+					<option value="Lend">Lend a gown</option>
+				</select>
+				<button    class="btn btn-primary form-one"><i class="fa fa-envelope-o"></i> Submit</button>
+			
+			<div class="msg-block"></div>
+		</div>
+	</div><!---->
+	<div   class="form-widget" data-popup="popup-contact">
+	</div>
+	<div id="popup-contact-form2" class="mfp-hide white-popup-block popup-form">
+		<div class="pop-header" style="background-color: #92278f">
+			<h3 class="title medium">Sell or Lend a Gown</h3>
+			<p class="title-sub mini">We will contact you within 24 hours.</p>	
+		</div>
+		<div class="pop-body">
+			
+				<input type="hidden" name="to" value="r.genesis.art@gmail.com">
+				<div class="row gt10">
+					<div class="col-md-6">
+						<input class="form-control" required data-label="Name" data-msg="Please enter name." type="text" id="name" name="name" placeholder="Enter your name">		
+					</div>
+					<div class="col-md-6">
+						<input class="form-control" required data-label="Phone" data-msg="Please phone number." type="text" id="phone" name="phone" placeholder="Enter your phone number">
+					</div>
+				</div>
+				<select class="form-control" required data-label="Service" data-msg="Please select service" id="service" name="service">
+					<option value="">-- Select service -- </option>
+					<option value="Sell">Sell a gown</option>
+					<option value="Lend">Lend a gown</option>
+				</select>
+				<button    class="btn btn-primary form-one"><i class="fa fa-envelope-o"></i> Submit</button>
+			
+			<div class="msg-block"></div>
+		</div>
 	<!-- Popup contact form -->
-	<div id="popup-contact-form" class="mfp-hide white-popup-block popup-form">
+	<div id="popup-contact-form1" class="mfp-hide white-popup-block popup-form">
 		<div class="pop-header">
 			<h3 class="title medium">Rent or Buy a Gown</h3>
 			<p class="title-sub mini">We will contact you within 24 hours</p>	
 		</div>
+
 		<div class="pop-body">
-			<form action="#" id="form-one" class="form-widget" data-popup="popup-contact">
 				<div class="row gt10">
+					
 					<div class="col-md-6">
-						<input class="form-control" id="name-one" required data-label="Name" data-msg="Please enter name." type="text" name="name" placeholder="Enter your name">		
+						<input class="form-control" id="name" required data-label="Name" data-msg="Please enter name." type="text" name="name" placeholder="Enter your name">	
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" id="phone-one" required data-label="Phone" data-msg="Please phone number." type="text" name="phone" placeholder="Enter your phone number">
+						<input class="form-control" id="phone" required data-label="Phone" data-msg="Please phone number." type="text" name="phone" placeholder="Enter your phone number">
 					</div>
 				</div>
-				<select class="form-control" id="service-one" required data-label="Service" data-msg="Please select service" name="service">
+				<select class="form-control" id="service" required data-label="Service" data-msg="Please select service" name="service">
 					<option value="">-- Select service -- </option>
 					<option value="Rent">Rent a gown</option>
 					<option value="Buy">Buy a gown</option>
 				</select>
-				<button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Submit</button>
-			</form>	
+				<button  class="btn btn-primary form-one "><i class="fa fa-envelope-o"></i> Submit</button>
+			
 			<div class="msg-block"></div>
 		</div>
 	</div><!---->
@@ -393,23 +438,23 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 			<p class="title-sub mini">We will contact you within 24 hours.</p>	
 		</div>
 		<div class="pop-body">
-			<form action="form-data/formdata.php" id="form-two" class="form-widget" data-popup="popup-contact">
+			
 				<input type="hidden" name="to" value="r.genesis.art@gmail.com">
 				<div class="row gt10">
 					<div class="col-md-6">
-						<input class="form-control" required data-label="Name" data-msg="Please enter name." type="text" name="name" placeholder="Enter your name">		
+						<input class="form-control" required data-label="Name" data-msg="Please enter name." type="text" id="name" name="name" placeholder="Enter your name">		
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" required data-label="Phone" data-msg="Please phone number." type="text" name="phone" placeholder="Enter your phone number">
+						<input class="form-control" required data-label="Phone" data-msg="Please phone number." type="text" id="phone" name="phone" placeholder="Enter your phone number">
 					</div>
 				</div>
-				<select class="form-control" required data-label="Service" data-msg="Please select service" name="service">
+				<select class="form-control" required data-label="Service" data-msg="Please select service" id="service" name="service">
 					<option value="">-- Select service -- </option>
 					<option value="Sell">Sell a gown</option>
 					<option value="Lend">Lend a gown</option>
 				</select>
-				<button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Submit</button>
-			</form>	
+				<button    class="btn btn-primary form-one"><i class="fa fa-envelope-o"></i> Submit</button>
+			
 			<div class="msg-block"></div>
 		</div>
 	</div><!---->
@@ -418,15 +463,18 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
 
 <!-- JavaScript --> 
 <script src="minify/rgen_min.js"></script>
-<script async src="js/rgen.js"></script>
+<script src="js/rgen.js"></script>
 
  <script type="text/javascript" src="https://library.devless.io/cdn/dv-alpha.js/dv_sdk.js"></script>
   <script>
+  function some(){
+  	alert("here");
+  }
       $(document).ready(function(){ 
-        $('.form-one').on('submit', function(evt) {
+        $('.form-one').on('click touch', function(evt) {
         	console.log("form submit")
           // Stop form submission
-          evt.preventDefault();
+         
         
               var dio = new Devless({
               token: '984e6fceb013c72e0e5d67c80b689f4f',
@@ -434,10 +482,10 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
               domainName: 'demo.devless.io',
               protocol: 'https'
             });
-            name = $("#name-one").val()
-            phone = $("#phone-one").val()
-            service = $("#service-one").val()
-            email = "test@gmail.com"
+            name = $("#name").val()
+            phone = $("#phone").val()
+            service = $("#service").val()
+            email = "no-email-required@gmail.com"
             purpose= "rent"
             when = Date()
  			
@@ -454,10 +502,13 @@ mixpanel.init("d7b34d838fb1aff1c003ba0652cf6162");</script><!-- end Mixpanel -->
               	console.log(response)
                 if(response.status_code == 609 ){
                     alert("Thank you for signing up ")
+                }else{
+                	alert("Sorry please provide a valid number")
                 }
+
                 
               }
-              dio.addData('mary-signup', 'signup-table', data, callback);
+              dio.addData('mary-signup', 'singup-table', data, callback);
            
          
         });
